@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+}
+nav{
+    background-color: #E493B3;
+    padding: 10px;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-enlace{
+    background-color: #9195F6;
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin: 0 5px; 
+}
+
+.nav-enlace:hover{
+    background-color: #5D5E9C;
+}
+
+@media(max-width: 500px){
+    nav{
+        flex-direction: column;
+    }
+    .nav-enlace{
+        margin: 3px 0;
+        padding: 10px 15px;
+    }
+}
