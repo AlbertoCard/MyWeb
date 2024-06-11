@@ -18,9 +18,11 @@ header h1{
 }
 
 section{
+    min-width: 200px;
     margin: 20px;
     padding: 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -28,7 +30,7 @@ article{
     height: 320px;
     width: 20%;
     min-width: 200px;
-    margin: 10px;
+    margin: 0 auto;
     padding: 10px;
     border: 1px solid #607274;
     border-radius: 5px;
@@ -62,4 +64,22 @@ article{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.boton:hover{
+    background-color: #E74C3C;
+}
+
+@media(max-width: 1000px){
+    article{
+        width: 40%;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 620px){
+    article{
+        width: 60%;
+        margin: 0 auto;
+    }
 }
