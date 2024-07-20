@@ -29,12 +29,12 @@
   </head>
 
   <body>
-    <h1>Number guessing game</h1>
+    <h1>Adivina el numero</h1>
 
-    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+    <p>Hemos seleccionado un número aleatorio entre 1 y 100. Fíjate si lo puedes adivinar en 10 turnos o menos. Vamos a decirte si tu número es más alto o más bajo.</p>
 
     <div class="form">
-      <label for="guessField">Enter a guess: </label>
+      <label for="guessField">Enviar respuesta: </label>
       <input type="number" min="1" max="100" required id="guessField" class="guessField">
       <input type="submit" value="Submit guess" class="guessSubmit">
     </div>
@@ -47,7 +47,87 @@
 
     <script>
 
-      // Your JavaScript goes here
+        //generar numero random
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        const guesses = document.querySelector('.guesses');
+        const lastResult = document.querySelector('.lastResult');
+        const lowOrHi = document.querySelector('.lowOrHi');
+
+        const guessSubmit = document.querySelector('.guessSubmit');
+        const guessField = document.querySelector('.guessField');
+
+        let guessCount = 1;
+        let resetButton;
+
+
+        function checkGuess() {
+            let userGuess = Number(guessField.value);
+            if (guessCount === 1) {
+                guesses.textContent = 'Intentos previos: ';
+            }
+
+            guesses.textContent += userGuess + ' ';
+
+            if(userGuess === randomNumber) {
+                lastResult.textContent = 'Felicitaciones! Adivinaste el numero';
+                lastResult.style.backgroundColor = 'green';
+                lowOrHi.textContent = '';
+                setGameOver();
+            } else if (guessCount === 10) {
+                lastResult.textContent = '!!!GAME OVER!!!';
+                setGameOver();
+            } else {
+                lastResult.textContent = 'Error!';
+                lastResult.style.backgroundColor = 'red';
+                if(userGuess < randomNumber) {
+                    lowOrHi.textContent = 'Muy bajo!';
+                } else if(userGuess > randomNumber) {
+                    lowOrHi.textContent = 'Muy alto!';
+                }
+            }
+
+            guessCount++;
+            guessField.value = '';
+            guessField.focus();
+        }
+
+        //añadir evento click
+        guessSubmit.addEventListener("click", checkGuess);
+
+
+        function setGameOver() {
+            guessField.disabled = true;
+            guessSubmit.disabled = true;
+            resetButton = document.createElement("button");
+            resetButton.textContent = "Iniciar nuevo juego";
+            document.body.append(resetButton);
+            resetButton.addEventListener("click", resetGame);
+        }
+
+        function resetGame() {
+            guessCount = 1;
+
+            //borra todos los parrafos
+            const resetParas = document.querySelectorAll(".resultParas p");
+            for (let i = 0; i < resetParas.length; i++) {
+                resetParas[i].textContent = "";
+            }
+
+            //borra el boton
+            resetButton.parentNode.removeChild(resetButton);
+
+            //habilita el campo de texto y el boton
+            guessField.disabled = false;
+            guessSubmit.disabled = false;
+            guessField.value = "";
+            guessField.focus();
+
+            lastResult.style.backgroundColor = "white";
+
+            randomNumber = Math.floor(Math.random() * 100) + 1;
+        }        
+
 
     </script>
   </body>
