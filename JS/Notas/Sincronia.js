@@ -116,3 +116,55 @@ cuadradoPromise(0)
     })
     .catch(err => console.error(err));
     
+
+
+// async await
+// La palabra clave async se utiliza para declarar funciones asíncronas.
+// Las funciones async siempre devuelven una promesa.
+// La palabra clave await se utiliza para esperar a que una promesa se resuelva.
+// Await solo se puede usar dentro de una función async.
+
+async function funcionAsincronaDeclarada() {
+    try {
+        console.log('Inicio Async Function');
+        let obj = await cuadradoPromise(0);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        obj = await cuadradoPromise(1);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        obj = await cuadradoPromise(2);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        obj = await cuadradoPromise(3);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        obj = await cuadradoPromise(4);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        obj = await cuadradoPromise(5);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        console.log('Fin Async Function');
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+funcionAsincronaDeclarada();
+
+const funcionAsincronaExpresada = async () => {
+    try {
+        console.log('Inicio Async Function');
+        let obj = await cuadradoPromise(6);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        obj = await cuadradoPromise(7);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        obj = await cuadradoPromise(8);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        obj = await cuadradoPromise(9);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        obj = await cuadradoPromise(10);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        console.log('Fin Async Function');
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+funcionAsincronaExpresada();
+
