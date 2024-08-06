@@ -57,3 +57,56 @@ console.log(Object.entries(objeto)); // Obtener las propiedades y valores de un 
 console.log(objeto.hasOwnProperty("nombre")); // Verificar si un objeto tiene una propiedad
 console.log(objeto2.hasOwnProperty("direccion")); // Verificar si un objeto tiene una propiedad
 
+
+
+// clases
+// Las clases son funciones especiales que se utilizan para crear objetos
+// Las clases se definen con la palabra reservada class
+// Las clases tienen un constructor que se ejecuta al momento de crear un objeto
+// Las clases pueden tener metodos
+// Las clases pueden tener propiedades
+// Las clases pueden tener setters y getters
+
+// Declaracion de una clase
+class Persona {
+    constructor(nombre, apellido, edad) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+    }
+
+    saludar() {
+        console.log("Hola");
+    }
+}
+
+// Creacion de un objeto de la clase Persona
+const persona = new Persona("Alberto", "Cardenas", 21);
+console.log(persona);
+
+// Llamar a un metodo de un objeto de la clase Persona
+persona.saludar();
+
+
+
+
+
+// propiedades dinamicas de los objetos
+// las propiedades dinamicas son propiedades que se crean en tiempo de ejecucion
+// declaracion de un objeto con propiedades dinamicas
+
+const objUsuarios = {};
+const usuarios = ["Alberto", "Juan", "Pedro", "Maria"];
+usuarios.forEach((usuario, index) => {
+    objUsuarios[`id_${index}`] = usuario;
+});
+
+// declaracion de un objeto con propiedades dinamicas math.random
+const objUsuarios2 = {
+    [`id_${Math.floor(Math.random() * 10)}`]: "Alberto"
+};
+
+
+
+
+
