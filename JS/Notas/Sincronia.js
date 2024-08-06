@@ -151,15 +151,15 @@ const funcionAsincronaExpresada = async () => {
     try {
         console.log('Inicio Async Function');
         let obj = await cuadradoPromise(6);
-        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`); // 36
         obj = await cuadradoPromise(7);
-        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`); // 49
         obj = await cuadradoPromise(8);
-        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`); // 64
         obj = await cuadradoPromise(9);
-        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`); // 81
         obj = await cuadradoPromise(10);
-        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`); // 100
         console.log('Fin Async Function');
     } catch (err) {
         console.error(err);
