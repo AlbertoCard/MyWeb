@@ -109,4 +109,71 @@ const objUsuarios2 = {
 
 
 
+// this en js
+// this hace referencia al objeto que ejecuta el codigo
+// en el navegador, this hace referencia al objeto window
+// en node, this hace referencia al objeto global
+
+// this en el navegador
+console.log(this); // window
+console.log(this === window); // true
+
+// propiedades del objeto window
+this.nombre = "Alberto"; // se agrega la propiedad nombre al objeto window
+console.log(window.nombre); // Alberto
+
+// this en node
+console.log(this); // {}
+console.log(this === global); // true
+
+
+
+
+// apply, call y bind
+
+this.lugar = "Contexto Global";
+
+function saludar(saludo, aQuien) {
+    console.log(`${saludo} ${aQuien} desde el ${this.lugar}`);
+}
+
+const obj = {
+    lugar: "Contexto Objeto"
+}
+
+// call
+// call es un metodo que permite llamar a una funcion con un objeto que sera el valor de this
+// call recibe dos parametros: el objeto que sera el valor de this y los argumentos de la funcion
+// call ejecuta la funcion y retorna el resultado
+
+// declaracion de una funcion
+
+saludar.call(obj, "Hola", "Alberto"); // Hola Alberto desde el Contexto Objeto
+
+
+// apply
+// apply hace lo mismo que call, pero recibe los argumentos de la funcion en un array
+
+saludar.apply(obj, ["Hola", "Alberto"]); // Hola Alberto desde el Contexto Objeto
+
+
+// bind
+// bind crea una nueva funcion con el objeto que sera el valor de this
+// bind recibe el objeto que sera el valor de this
+// bind retorna una nueva funcion
+
+const nuevoObj = {
+    nombre: "Alberto",
+    saludar: function() {
+        console.log(`Hola ${this.nombre}`);
+    }
+}
+
+nuevoObj.saludar(); // Hola Alberto
+
+const nuevaFuncion = {
+    saludar: nuevoObj.saludar.bind(this) // Hola Alberto
+}
+
+nuevaFuncion.saludar(); // Hola Alberto
 
