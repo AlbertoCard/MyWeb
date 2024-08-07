@@ -51,7 +51,11 @@ console.log(objeto); // { nombre: 'Juan', apellido: 'Perez', edad: 30, casado: f
 
 console.log(typeof objeto); // object
 
-
+// leer un json de un archivo
+let fs = require("fs"); // importar el modulo fs
+let archivo = fs.readFileSync("archivo.json", "utf-8"); // leer el archivo
+let datos = JSON.parse(archivo); // convertir el string json en un objeto
+console.log(datos); // { nombre: 'Juan', apellido: 'Perez', edad: 30, casado: false, hijos: null, mascotas: [ { nombre: 'Firulais', raza: 'Caniche' }, { nombre: 'Ramon', raza: 'Pastor Aleman' } ] }
 
 
 
