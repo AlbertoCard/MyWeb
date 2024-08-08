@@ -17,3 +17,19 @@ console.log(aviso); // Muestra el valor introducido en el campo de texto
 const abrir = document.getElementById('abrir-ventana'),
         cerrar = document.getElementById('cerrar-ventana'),
         imprimir = document.getElementById('imprimir-ventana');
+
+
+let ventana;
+
+abrir.addEventListener('click', () => {
+    ventana = window.open('https://www.google.com', '_blank');
+});
+
+cerrar.addEventListener('click', () => {
+    ventana.close();
+});
+
+imprimir.addEventListener('click', () => {
+    ventana.print();
+});
+

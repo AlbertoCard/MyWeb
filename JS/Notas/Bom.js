@@ -197,3 +197,68 @@ window.addEventListener('load', () => {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Contenido cargado');
 });
+
+
+
+
+
+
+
+
+
+// datos de el url
+
+console.log(location);
+console.log(location.href); // url completo
+console.log(location.protocol); // protocolo
+console.log(location.host); // host
+console.log(location.hostname); // hostname
+console.log(location.port); // puerto
+console.log(location.pathname); // ruta
+console.log(location.search); // parametros
+console.log(location.hash); // ancla
+
+
+
+// historial de navegacion
+
+console.log(history);
+console.log(history.length); // cantidad de paginas en el historial
+console.log(history.forward()); // avanzar en el historial
+console.log(history.back()); // retroceder en el historial
+console.log(history.go(-2)); // retroceder dos paginas en el historial
+console.log(history.go(2)); // avanzar dos paginas en el historial
+
+
+// navegacion
+
+console.log(navigator);
+console.log(navigator.userAgent); // informacion del navegador
+console.log(navigator.appVersion); // version del navegador
+console.log(navigator.platform); // plataforma del navegador
+console.log(navigator.language); // idioma del navegador
+console.log(navigator.onLine); // estado de la conexion
+console.log(navigator.geolocation); // geolocalizacion
+console.log(navigator.serviceWorker); // service worker
+console.log(navigator.mediaDevices); // dispositivos multimedia
+console.log(navigator.getBattery); // bateria
+console.log(navigator.getGamepads); // gamepads
+console.log(navigator.getUserMedia); // camara y microfono
+console.log(navigator.requestMIDIAccess); // midi
+console.log(navigator.requestMediaKeySystemAccess); // drm
+console.log(navigator.requestWakeLock); // bloqueo de pantalla
+console.log(navigator.requestBluetooth); // bluetooth
+console.log(navigator.requestUSB); // usb
+console.log(navigator.requestSerial); // serial
+console.log(navigator.requestIdleCallback); // callback
+console.log(navigator.requestAnimationFrame); // animacion
+console.log(navigator.requestFileSystem); // sistema de archivos   
+console.log(navigator.requestStorageQuota); // cuota de almacenamiento
+console.log(navigator.requestFullscreen); // pantalla completa
+console.log(navigator.requestPointerLock); // bloqueo de puntero
+console.log(navigator.requestDeviceLight); // luz
+console.log(navigator.requestDeviceMotion); // movimiento
+console.log(navigator.requestDeviceOrientation); // orientacion
+console.log(navigator.requestVR); // realidad virtual
+console.log(navigator.requestMIDIPort); // midi
+console.log(navigator.requestMediaKeySystemAccess); // drm
