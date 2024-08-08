@@ -149,3 +149,51 @@ console.log(ubicacion.search); // ?gws_rd=ssl
 console.log(ubicacion.hash); // #
 
 
+
+
+
+
+
+
+
+
+
+console.log(window.innerHeight); // altura de la ventana
+console.log(window.innerWidth); // ancho de la ventana
+
+console.log(window.outerHeight); // altura de la ventana incluyendo la barra de herramientas
+console.log(window.outerWidth); // ancho de la ventana incluyendo la barra de herramientas
+
+console.log(window.screen.height); // altura de la pantalla
+console.log(window.screen.width); // ancho de la pantalla
+
+console.log(window.screen.availHeight); // altura de la pantalla disponible
+console.log(window.screen.availWidth); // ancho de la pantalla disponible
+
+
+
+// evento con el cambio de tamaño de la ventana
+window.addEventListener('resize', () => {
+    console.log('Cambio de tamaño');
+    console.log(window.innerHeight);
+    console.log(window.innerWidth);
+});
+
+
+
+// evento con el cambio de scroll
+window.addEventListener('scroll', () => {
+    console.log('Cambio de scroll');
+    console.log(window.scrollY);
+    console.log(window.scrollX);
+});
+
+
+// evento con la carga de la pagina
+window.addEventListener('load', () => {
+    console.log('Carga completa');
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Contenido cargado');
+});
