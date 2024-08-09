@@ -31,12 +31,13 @@ body{
 
 /* menu hamburguesa */
 .header{
-    background-color: var(--main-color);
-    color: white;
-    padding: 1rem;
     position: sticky; /* para que se quede fijo en la parte superior */
+    z-index: 997; /* para que esté por encima de todo */
+    top: 0;
     width: 100%;
-    z-index: 998; /* para que esté por encima de todo */
+    padding: 1rem;
+    color: white;
+    background-color: var(--main-color);
 }
 
 .header h1{
@@ -56,7 +57,7 @@ body{
 
 .panel{
     position: fixed; 
-    z-index: 999;
+    z-index: 998;
     top: 0;
     left: 0;
     right: 0;
@@ -69,8 +70,8 @@ body{
     overflow-y: auto; /* para que se pueda hacer scroll */
     background-color: var(--second-color);
     opacity: 0;
-    visibility: visible;
-    transition: transform 0.5s, opacity 0.5s;
+    visibility: hidden;
+    transition: transform 0.5s, opacity 0.5s ease;
     transform: translate(-100%, 0);
 }
 .panel.is-active{
