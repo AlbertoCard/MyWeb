@@ -1,3 +1,120 @@
+/* declaramos variables */
 :root{
-    --fondo: #f5f5f5;
+    --main-color: #61a0a3;
+    --main-color-hover: #3d6b6e;
+    --second-color: #121f21;
+    --container-width: 1200px;
+}
+
+
+/* reset de estilos */
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* estilos generales */
+body{
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #eff1e1;
+}
+
+/* menu hamburguesa */
+.header{
+    background-color: var(--main-color);
+    color: white;
+    padding: 1rem;
+    position: sticky; /* para que se quede fijo en la parte superior */
+    width: 100%;
+    z-index: 998; /* para que esté por encima de todo */
+}
+
+.header h1{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section{
+    padding: 2rem;
+    padding-top: 4rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--container-width);
+    min-height: 80vh;
+    text-align: center;
+}
+
+.panel{
+    position: fixed; 
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* para que se pueda hacer scroll */
+    background-color: var(--second-color);
+    opacity: 0;
+    visibility: visible;
+    transition: transform 0.5s, opacity 0.5s;
+    transform: translate(-100%, 0);
+}
+.panel.is-active{
+    transform: translate(0, 0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.panel-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+}
+
+.menu{
+    width: inherit; /* para que ocupe todo el ancho del panel */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.menu a{
+    padding: 2rem;
+    width: inherit;
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.menu a:hover{
+    font-weight: bold;
+    background-color: var(--main-color-hover);
+    color: white;
 }
