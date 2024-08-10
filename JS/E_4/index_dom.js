@@ -6,4 +6,5 @@ const d = document;
 d.addEventListener("DOMContentLoaded", (e) => {
     menu_hamburguesa(".panel-btn", ".panel", ".menu a");
     digitalClock("#reloj", "#activar-reloj", "#detener-reloj");
+    alarm("assets/fire-alarm-33770.mp3", "#activar-alarma", "#detener-alarma");
 });
