@@ -138,3 +138,33 @@ body{
     border-radius: 50%;
     background-color: var(--main-color);
 }
+
+/* estilos de el boton de scroll*/
+
+.scroll-top-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 12vh;
+    right: calc(1vw);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    transition: all 0.3s ease;
+}
+
+.scroll-top-btn:hover{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
