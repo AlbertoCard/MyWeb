@@ -119,3 +119,22 @@ body{
     background-color: var(--main-color-hover);
     color: white;
 }
+
+
+
+/* estilos de eventos del teclado */
+
+.stage{
+    display: flex;
+    margin-top: 1rem;
+    min-height: 50vh;
+    background-color: var(--second-color);
+}
+
+.ball{
+    margin: auto;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
