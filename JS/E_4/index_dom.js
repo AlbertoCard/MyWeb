@@ -3,6 +3,7 @@ import { digitalClock, alarm } from "./reloj.js";
 import { shortcuts, moveBall } from "./teclado.js";
 import countdown from "./cuenta_regresiva.js";
 import scrollTopButton from "./boton_scroll.js";
+import darkTheme from "./tema_oscuro.js";
 
 const d = document;
 
@@ -12,6 +13,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
     alarm("assets/fire-alarm-33770.mp3", "#activar-alarma", "#detener-alarma");
     countdown("countdown", "Sep 19, 2024 00:00:00", "Feliz Cumpleaños!! 🎂🎉");
     scrollTopButton(".scroll-top-btn");
+    darkTheme(".dark-theme-btn", "dark-mode");
 });
 
 d.addEventListener("keydown", (e) => {
