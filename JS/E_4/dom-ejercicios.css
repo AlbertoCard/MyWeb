@@ -210,3 +210,28 @@ body{
 .offline{
     background-color: #b71c1c;
 }
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.card{
+    background-color: var(--second-color);
+    color: var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.card img{
+    width: 90%;
+    height: auto;
+
+}
+
+.card figcaption{
+    padding: 1rem;
+}
+
+.filter{
+    display: none;
+}
