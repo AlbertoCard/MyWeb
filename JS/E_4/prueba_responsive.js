@@ -17,6 +17,5 @@ export default function responsiveMedia(form) {
 
     d.addEventListener("click", (e) => {
         if(e.target === $form.cerrar) tester.close();
-        console.log(e.target);
     });
 }
