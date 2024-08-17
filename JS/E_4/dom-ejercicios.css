@@ -352,3 +352,78 @@ body{
         left: 1vw;
     }
 }
+
+/* estilos formulario*/
+
+.contact-form{
+    --contact-ok-color: #4caf50;
+    --contact-error-color: #f44336;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.contact-form > *{
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+}
+
+.contact-form textarea{
+    resize: none;
+}
+
+.contact-form legend,
+.contact-form-response{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-form input[type="submit"]{
+    width: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form *::placeholder{
+    color: var(--main-color);
+}
+
+.contact-form [required]:valid{
+    border-color: var(--contact-ok-color);
+}
+
+.contact-form [required]:invalid{
+    border-color: var(--contact-error-color);
+}
+
+.contact-form-error{
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: var(--contact-error-color);
+    color: white;
+    transition: all 800ms ease;
+}
+
+.contact-form-error.is-active{
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-in-out both;
+}
+
+.none{
+    display: none;
+}
+
+ @keyframes show-message {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+ }
