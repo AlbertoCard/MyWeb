@@ -114,3 +114,30 @@
         console.log("Esto se ejecutara independientemente del resultado de la promesa Axios");
     });
 })();
+
+(() => {
+    const $axiosAsync = document.getElementById("axios-async"),
+        $fragment = document.createDocumentFragment();
+    
+    axios.get("https://jsonplaceholder.typicode.com/users")
+    
+    async function getData() {
+        try {
+            let res = await axios.get("https://jsonplaceholder.typicode.com/users"),
+                json = await res.data;
+
+            json.forEach((el) => {
+                const $li = document.createElement("li");
+                $li.innerHTML = `${el.name} -- ${el.email} -- ${el.phone}`;
+                $fragment.appendChild($li);
+            });
+            $axiosAsync.appendChild($fragment);
+        } catch (error) {
+            let message = error.response.statusText || "Ocurrio un error";
+            $axiosAsync.innerHTML = `Error ${error.response.status}: ${message}`;
+        } finally {
+        }
+    }
+
+    getData();
+})();
