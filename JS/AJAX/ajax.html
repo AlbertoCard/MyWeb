@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+<body>
+    <p>Ajax no es una tecnologia en si mismo. Se unen:</p>
+    <ul>
+        <li>HTML y CSS</li>
+        <li>DOM</li>
+        <li>XMLHttpRequest</li>
+        <li>JavaScript</li>
+        <li>
+            Estado de la petición:
+            <ul>
+                <li>0: No inicializado</li>
+                <li>1: Conexión establecida</li>
+                <li>2: Recibido</li>
+                <li>3: Procesando</li>
+                <li>4: Respuesta lista</li>
+            </ul>
+        </li>
+        <li>
+            codigos de Respuesta HTTP
+            <ul>
+                <li>100 - 199 Respuestas informativas</li>
+                <li>200 - 299 Respuestas satisfactorias</li>
+                <li>300 - 399 Redirecciones</li>
+                <li>400 - 499 Errores del cliente</li>
+                <li>500 - 599 Errores del servidor</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Objeto XMLHttpRequest</h2>
+    <ol id="xhr"></ol>
+
+    <script src="./ajax.js"></script>
+</body>
+</html>
