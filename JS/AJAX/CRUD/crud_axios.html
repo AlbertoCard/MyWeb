@@ -9,18 +9,18 @@
     <h1>CRUD API REST AXIOS</h1>
     <section class="crud">
         <article>
-            <h2 class="brud-title">Agregar sayanjin</h2>
-            <form id="add-sayanjin">
+            <h2 class="crud-title">Agregar sayanjin</h2>
+            <form class="crud-form">
                 <input type="text" name="name" placeholder="Nombre">
                 <br>
                 <input type="text" name="power" placeholder="Poder">
                 <br>
                 <input type="submit" value="Agregar">
-                <input type="hidden" name="action">
+                <input type="hidden" name="id">
             </form>
         </article>
         <article>
-            <h2 class="brud-title"></h2>
+            <h2 class="crud-title"></h2>
             <table id="crud-table">
                 <thead>
                     <tr>
@@ -29,8 +29,7 @@
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody id="crud-table-body">
-                </tbody>
+                <tbody></tbody>
             </table>
         </article>
         <template id="crud-template">
