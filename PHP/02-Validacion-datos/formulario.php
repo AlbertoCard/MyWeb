@@ -25,17 +25,17 @@
     <hgroup><h1>Formulario de datos POST</h1></hgroup>
     <form name="valida_post_frm" action="validar-datos.php" method="post" enctype="application/x-www-form-urlencoded">
         <label>Ingresa tu nombre:</label>
-        <input type="text" name="name_txt">
+        <input type="text" name="name_txt" id="name-post">
         <br><br>
         <label>Ingresa password</label>
-        <input type="password" name="password_txt">
+        <input type="password" name="password_txt" id="password-post">
         <br><br>
-        <input type="radio" name="sexo_rdo" value="M">
+        <input type="radio" name="sexo_rdo-post" value="M">
         <label>Masculino</label>
-        <input type="radio" name="sexo_rdo" value="F">
+        <input type="radio" name="sexo_rdo-post" value="F">
         <label>Femenino</label>
         <input type="hidden" name="enviar_hdn" value="post">
-        <input type="button" name="enviar_btn" value="Enviar POST">
+        <input type="button" name="enviar_btn" value="Enviar POST" id="enviar-post">
     </form>
     <script src="script.js"></script>
 </body>
