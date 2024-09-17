@@ -1,0 +1,30 @@
+const d = document,
+        w = window;
+
+w.onload = () => {
+    d.getElementById("enviar-get").onclick = validarDatosGET;
+}
+
+function validarDatosGET(){
+    const nombre = d.getElementById("name-get").value,
+            password = d.getElementById("password-get").value,
+            sexo = d.getElementsByName("sexo_rdo");
+    
+    let validar = true;
+
+    if(!nombre){
+        alert("El nombre esta vacio");
+        validar = false;
+    } else if(!password){
+        alert("Ingresa contraseña");
+        validar = false;
+    } else if(!sexo[0].checked && !sexo[1].checked){
+        alert("Selecciona el sexo");
+        validar = false;
+    }
+
+    if(validar){
+        d.getElementsByName("valida_get_frm")[0].submit();
+        console.log("asd");
+    }
+};
