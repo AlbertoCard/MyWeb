@@ -32,7 +32,7 @@
             $mensaje = "No se pudo dar de alta";
 
     } else{
-        $mesaje = "Email ya registrado";
+        $mensaje = "Email ya registrado";
     }
 
     $conexion->close();
