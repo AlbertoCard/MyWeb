@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="css/mis-contactos.css">
 </head>
 <body>
-    <section id="contenido">
+    <section id="principal">
         <nav>
             <ul>
                 <li><a href="index.php" class="cambio">Home</a></li>
@@ -44,7 +44,7 @@
             </ul>
         </nav>
     </section>
-    <section id="principal">
+    <section id="contenido">
         <?php include($contenido)?>
     </section>
     <script src="js/mis-contactos.js"></script>
