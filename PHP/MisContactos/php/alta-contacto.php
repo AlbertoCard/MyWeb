@@ -24,7 +24,7 @@
         </div>
         <div>
             <label for="pais">Pais: </label>
-            <select name="pais_slc" id="pais" class="cambio">
+            <select name="pais_slc" id="pais" class="cambio" required>
                 <option value="">- - -</option>
                 <?php include("select-pais.php");?>
             </select>
