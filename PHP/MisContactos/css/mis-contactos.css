@@ -19,6 +19,33 @@ a:hover{
     color: #7bbfd5;
 }
 
+form{
+    margin: 0.5em;
+}
+
+form div{
+    margin: .5em;
+}
+
+fieldset{
+    border: .1em solid #f60;
+    border-radius: .5em;
+    padding: 1em;
+}
+
+input[type="checkbox"], input[type="radio"], select {
+    background-color: #EEE;
+    cursor: pointer;
+}
+
+input[type="date"], input[type="email"], input[type="number"], input[type="text"] {
+    background-color: #EEE;
+    border-radius: .25em;
+    color: #f60;
+    font-size: 1em;
+    padding: .25em;
+}
+
 nav, #principal {
     display: inline-block;
     font-size: 1em;
@@ -28,21 +55,44 @@ nav, #principal {
     vertical-align: top;
 }
 
+input[type="date"]:focus,input[type="email"]:focus,input[type="nuber"]:focus,input[type="text"]:focus{
+    background-color: #C6ECF9;
+}
+
+input[type="submit"]{
+    background-color: #FF9A55;
+    color: #500;
+    font-size: 1.5em;
+}
+
+input[type="submit"]:hover{
+    background-color: #7bbfd5;
+    border-radius: .25em 0;
+    color: #000;
+    cursor: pointer;
+}
+
 ul{
     list-style: none;
 }
 
 #principal{
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
+}
+
+#principal a {
+    display: block;
+    white-space: nowrap;
+    margin-bottom: 0.5em;
 }
 
 #contenido {
     display: inline-block;
-    text-align: center;
-    width: 75%;
+    text-align: left;
+    width: 70%;
 }
 
 .cambio {
-    transition: all 2.5s ease-out;
+    transition: all 1.5s ease-out;
 }

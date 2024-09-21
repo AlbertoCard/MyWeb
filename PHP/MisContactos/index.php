@@ -30,7 +30,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis contactos</title>
-    <link rel="stylesheet" href="css/mis-contactos.css">
+    <link rel="stylesheet" href="./css/mis-contactos.css">
 </head>
 <body>
     <section id="principal">
@@ -47,6 +47,6 @@
     <section id="contenido">
         <?php include($contenido)?>
     </section>
-    <script src="js/mis-contactos.js"></script>
+   <script src="js/mis-contactos.js"></script>
 </body>
 </html>
