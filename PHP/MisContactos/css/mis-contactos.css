@@ -96,3 +96,10 @@ ul{
 .cambio {
     transition: all 1.5s ease-out;
 }
+.mensajes{
+    background-color: lightblue;
+    border-radius: .5em;
+    color: #000;
+    font-size: 1em;
+    padding: .5em;
+}
