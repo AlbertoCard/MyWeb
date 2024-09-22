@@ -77,6 +77,33 @@ input[type="submit"]:hover{
     cursor: pointer;
 }
 
+table{
+    border: .1em solid #f60;
+    border-radius: 1em;
+    cursor: default;
+    font-size: .75em;
+    padding: .25em;
+    width: 100%;
+}
+
+table img {
+    max-width: 50%;
+}
+
+table td{
+    border: .1em solid #212121;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+table tr{
+    background-color: powderblue;
+}
+
+table thead tr {
+    background-color: transparent;
+}
+
 ul{
     list-style: none;
 }
