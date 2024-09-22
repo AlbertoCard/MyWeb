@@ -1,12 +1,12 @@
 <?php
     $email = $_POST["email_txt"];
     $nombre = $_POST["nombre_txt"];
-    $sexo = $_POST["sexo_txt"];
+    $sexo = $_POST["sexo_rdo"];
     $nacimiento = $_POST["nacimiento_txt"];
     $telefono = $_POST["telefono_txt"];
     $pais = $_POST["pais_slc"];
 
-    $imagen_generica = ($sexo=="M")?"img/fotos/amigo.png":"img/fotos/amiga.png";
+    $imagen_generica = ($sexo=="M")?"img/fotos/amigo.png":"img/fotos/amiga.jpg";
 
     //validar existencia del email
     include("conexion.php");

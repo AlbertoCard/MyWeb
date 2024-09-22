@@ -59,6 +59,11 @@ input[type="date"]:focus,input[type="email"]:focus,input[type="nuber"]:focus,inp
     background-color: #C6ECF9;
 }
 
+input[type="email"]:disabled {
+    background-color: transparent;
+    color: #CCC;
+}
+
 input[type="submit"]{
     background-color: #FF9A55;
     color: #500;

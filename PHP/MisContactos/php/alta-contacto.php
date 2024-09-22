@@ -12,7 +12,7 @@
         <div>
             <label for="m">Sexo:</label>
             <input type="radio" id="m" name="sexo_rdo" title="Tu sexo" value="M" require> <label for="m">Masculino</label>
-            <input type="radio" id="f" name="sexo_rdo" title="Tu sexo" value="F" required> <label for="m">Femenino</label>
+            <input type="radio" id="f" name="sexo_rdo" title="Tu sexo" value="F" required> <label for="f">Femenino</label>
         </div>
         <div>
             <label for="nacimiento">Fecha de nacimiento: </label>
