@@ -16,7 +16,7 @@
             $titulo = "Cambio a contacto";
             break;
          case "consultas":
-             $contenido = "./php/alta-contacto.php";
+             $contenido = "./php/consulta-contactos.php";
              $titulo = "Consulta de contactos";
              break;
         default:
