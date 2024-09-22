@@ -3,7 +3,3 @@
     include("php/tabla-resultados.php");
     
 ?>
-
-<?php
-    
-?>
