@@ -1,5 +1,7 @@
 <?php
+if(empty($_GET["pais_slc"])){
     include("conexion.php");
+}
     include("funciones.php");
 
     $ejecutar_consulta = mysqli_query($conexion, $consulta);
