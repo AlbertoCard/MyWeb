@@ -314,3 +314,66 @@ body{
     cursor: pointer;
 }
 
+/* questions */
+
+.questions{
+    text-align: center;
+}
+
+.questions_container{
+    display: grid;
+    gap: 2em;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.questions_padding{
+    padding: 0;
+    transition: padding .2s;
+    border: 1px solid #5454d4;
+    border-radius: 6px;
+}
+
+.questions_padding--add{
+    padding: 30px;
+}
+
+.questions_answer{
+    padding: 0 30px;
+    overflow: hidden;
+}
+
+.questions_title{
+    display: flex;
+    font-size: 20px;
+    padding: 30px 0 30px;
+    cursor: pointer;
+    color: var(--color-title);
+    justify-content: space-between;
+}
+
+.questions_arrow{
+    border-radius: 50%;
+    background-color: var(--color-title);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    transition: transform .3s;
+}
+
+.questions_arrow--rotate{
+    transform: rotate(180deg);
+}
+
+.questions_show{
+    text-align: left;
+    height: 0;
+    transition: height .3s;
+}
+
+.questions_img{
+    display: block;
+}
